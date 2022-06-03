@@ -70,7 +70,7 @@ public PImage fitSize(PImage img) {
   if(img.height>img.width){
     img2 = img.get(0,PApplet.parseInt(img.height/2.0f-((img.width/16.0f)*9.0f)/2.0f),img.width,PApplet.parseInt((img.width/16.0f)*9.0f));
   } else {
-    img2 = img;
+    img2 = img.get(PApplet.parseInt(img.width/2.0f-((img.height/9.0f)*16.0f)/2.0f),0,PApplet.parseInt((img.height/9.0f)*16.0f),img.height);
   }
   img2.resize(1280/5, 720/5);
   

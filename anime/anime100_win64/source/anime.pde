@@ -54,7 +54,7 @@ PImage fitSize(PImage img) {
   if(img.height>img.width){
     img2 = img.get(0,int(img.height/2.0-((img.width/16.0)*9.0)/2.0),img.width,int((img.width/16.0)*9.0));
   } else {
-    img2 = img;
+    img2 = img.get(int(img.width/2.0-((img.height/9.0)*16.0)/2.0),0,int((img.height/9.0)*16.0),img.height);
   }
   img2.resize(1280/5, 720/5);
   
